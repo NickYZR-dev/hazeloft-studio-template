@@ -1,0 +1,45 @@
+---
+interface Props {
+  title?: string
+  description?: string
+}
+
+const {
+  title = 'Hazeloft Studio Template',
+  description = 'The official Hazeloft starter template, built with Astro.',
+} = Astro.props
+---
+
+<!doctype html>
+<html lang="en" class="h-full antialiased">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-full flex flex-col font-sans">
+    <slot />
+    <style is:global>
+      :root {
+        --background: #ffffff;
+        --foreground: #171717;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --background: #0a0a0a;
+          --foreground: #ededed;
+        }
+      }
+
+      body {
+        background: var(--background);
+        color: var(--foreground);
+      }
+    </style>
+  </body>
+</html>
