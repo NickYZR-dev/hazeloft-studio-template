@@ -1,17 +1,59 @@
 ---
+import Layout from '../layouts/Layout.astro'
 
+import { Icon } from 'astro-icon/components'
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" cobuntent="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <div class="flex flex-col flex-1 items-center justify-center bg-black">
+    <main
+      class="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 sm:items-start"
+    >
+     <Icon size={96} name="simple-icons:handshake-protocol" />
+
+      <div class="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
+        <h1
+          class="max-w-md text-3xl font-semibold leading-10 tracking-tight text-neutral-100"
+        >
+          To get started, edit the src/pages/index.astro file.
+        </h1>
+        <p class="max-w-md text-lg leading-8 text-neutral-400">
+          This is the official Hazeloft Studio template. Head over to the{' '}
+          <a
+            href="https://docs.astro.build"
+            class="font-medium text-neutral-50 underline underline-offset-4"
+          >
+            Astro docs
+          </a>{' '}
+          or explore more{' '}
+          <a
+            href="https://hazeloft.com"
+            class="font-medium text-neutral-50 underline underline-offset-4"
+          >
+            Hazeloft
+          </a>{' '}
+          templates to keep building.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-4 text-base font-medium sm:flex-row">
+        <a
+          class="flex h-11 w-full items-center justify-center gap-2 rounded-full border border-white bg-white px-2 text-black transition-colors hover:bg-neutral-300 md:w-36"
+          href="https://hazeloft.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Get Started
+        </a>
+        <a
+          class="flex h-11 w-full items-center justify-center rounded-full border border-solid border-neutral-800 px-5 transition-colors hover:bg-neutral-900 md:w-36"
+          href="https://docs.astro.build"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Documentation
+        </a>
+      </div>
+    </main>
+  </div>
+</Layout>
