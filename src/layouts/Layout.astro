@@ -1,4 +1,7 @@
 ---
+import '@fontsource-variable/geist'
+import '@fontsource-variable/geist-mono'
+
 interface Props {
   title?: string
   description?: string
@@ -11,17 +14,16 @@ const {
 ---
 
 <!doctype html>
-<html lang="en" class="h-full antialiased">
+<html lang="en" class="h-full">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <title>{title}</title>
   </head>
-  <body class="bg-black text-white min-h-full flex flex-col font-sans antialiased">
+  <body class="min-h-full flex flex-col bg-background-100 font-sans text-gray-1000 antialiased">
     <slot />
   </body>
 </html>

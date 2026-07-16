@@ -1,12 +1,15 @@
 # Hazeloft Studio Template
 
-The official Hazeloft starter template, built with [Astro](https://astro.build) and [UnoCSS](https://unocss.dev).
+The official Hazeloft starter template: [Astro 7](https://astro.build),
+[UnoCSS](https://unocss.dev) (`presetWind4`), [astro-icon](https://github.com/natemoo-re/astro-icon),
+and the **Hazeloft design system** (Geist type, 100–1000 color scale, component recipes —
+see `uno.config.ts` and `AGENTS.md`).
 
 ## Getting started
 
 ```bash
-bun install
-bun run dev
+npm install
+npm run dev
 ```
 
 The dev server runs at [http://localhost:4321](http://localhost:4321).
@@ -15,24 +18,19 @@ The dev server runs at [http://localhost:4321](http://localhost:4321).
 
 | Command           | Action                                       |
 | ----------------- | -------------------------------------------- |
-| `bun run dev`     | Start the local dev server                   |
-| `bun run build`   | Build the production site to `./dist/`       |
-| `bun run preview` | Preview the build locally, before deploying  |
-
-## Stack
-
-- **[Astro](https://astro.build)** — static-first web framework
-- **[UnoCSS](https://unocss.dev)** — atomic CSS engine (`presetWind4`)
-- **[astro-icon](https://github.com/natemoo-re/astro-icon)** — inline SVG icons
+| `npm run dev`     | Start the local dev server                   |
+| `npm run build`   | Build the production site to `./dist/`       |
+| `npm run preview` | Preview the build locally, before deploying  |
 
 ## Structure
 
 ```
 src/
 ├─ layouts/
-│  └─ Layout.astro   # base HTML shell
+│  └─ Layout.astro   # base HTML shell (fonts + design system surface)
 └─ pages/
    └─ index.astro    # home page
 ```
 
-Edit `src/pages/index.astro` to get started.
+Dependency versions are **pinned** and installs are locked with `package-lock.json` —
+Hazeloft Studio relies on this for deterministic sandbox builds.
