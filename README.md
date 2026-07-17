@@ -2,7 +2,7 @@
 
 The official Hazeloft starter template: [Astro 7](https://astro.build),
 [UnoCSS](https://unocss.dev) (`presetWind4`), [astro-icon](https://github.com/natemoo-re/astro-icon),
-and the **Hazeloft design system** (Geist type, 100–1000 color scale, component recipes —
+and the **Hazeloft design system** (system font, 100–1000 color scale, component recipes —
 see `uno.config.ts` and `AGENTS.md`).
 
 ## Getting started

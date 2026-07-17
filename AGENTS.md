@@ -12,7 +12,7 @@ This project is built with **Astro 7 + UnoCSS (presetWind4) + astro-icon**, on t
 - `uno.css`, `virtual:*`, and `astro:*` are virtual modules, NOT npm packages.
 - Icons: `import { Icon } from 'astro-icon/components'`, then `<Icon name="lucide:menu" />`.
   Preinstalled sets: `lucide`, `mdi`, `simple-icons`.
-- Fonts are wired in `Layout.astro` (Geist Sans/Mono via @fontsource) — do not re-import them.
+- Typography uses the DEFAULT system font stack (via `font-sans`/`font-mono` in `uno.config.ts`) — no custom/web fonts. Do not add `@fontsource` or other font packages.
 - Do not touch `server.allowedHosts` in `astro.config.mjs` — the live preview needs it.
 
 ## Hazeloft design system
